@@ -94,6 +94,13 @@ class MainActivity : AppCompatActivity() {
              startActivity(i)
         }
 
+        javaMail.setOnClickListener {
+                var lop = LongOperation(et3.text.toString(),
+                                        et4.text.toString(),
+                                        et5.text.toString())
+                lop.execute()
+        }
+
     } // closing onCreate( )
 
     override fun onActivityResult(requestCode: Int,
